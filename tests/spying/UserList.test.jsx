@@ -17,7 +17,7 @@ describe('UserList', () => {
      );
 
      await waitFor(() => {
-        expect(axios.get).toHaveBeenCalledWith("https://dummy-user-api.onrender.com/api/users");
+        expect(axios.get).toHaveBeenCalledWith("http://localhost:8080/api/users");
 
         console.log(screen.debug());
         expect(screen.getByText(/Emily\s+Johnson/i)).to.exist

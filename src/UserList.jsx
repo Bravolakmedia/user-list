@@ -6,7 +6,7 @@ const UserList = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("https://dummy-user-api.onrender.com/api/users")
+    axios.get("http://localhost:8080/api/users")
       .then((res) => setUsers(res.data))
       .catch((err) => console.error("Error fetching users:", err));
   }, []);

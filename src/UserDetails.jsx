@@ -8,7 +8,7 @@ const UserDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://dummy-user-api.onrender.com/api/users/${id}`)
+    axios.get(`http://localhost:8080/api/users/${id}`)
       .then((res) => setUser(res.data))
       .catch((err) => console.error("Error fetching user:", err));
   }, [id]);
